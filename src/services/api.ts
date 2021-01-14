@@ -1,5 +1,5 @@
 import axios from 'axios'
-import Axios , {AxiosInstance , AxiosResponse , AxiosError} from 'axios'
+import  {AxiosInstance , AxiosResponse , AxiosError} from 'axios'
 import { showAlert } from '../util'
 
 
