@@ -69,8 +69,26 @@ const Auth :FC = () => {
                         }
                     </div>
                     {
-                        !isLogin 
+                        !isLogin && (
+                            <div className="inputWrapper">
+                                <input type="text" ref={register} name="email" placeholder="Email (optional)" />
+                                {
+                                    errors && errors.email && (
+                                        <p className="error">{errors.email.message}</p>
+                                    )
+                                }
+                            </div>
+                        )
                     }
+                    <div className="inputWrapper">
+                        <button disabled={loading} type="submit">
+                            { isLogin ? 'Login' : 'Create Account' }
+                        </button>
+                    </div>
+
+                    <p onClick={() => setIsLogin(!isLogin)} style={{cursor : 'pointer' , opacity : 0.7}} >
+                        { isLogin ? 'New here? Create an account' : 'Already have an account?' }
+                    </p>
                 </form>
             </div>
         </div>
