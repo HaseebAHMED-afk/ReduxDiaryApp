@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
     auth: authReducer,
     diaries: diariesReducer,
     user: userReducer,
-    entires: entriesReducer,
+    entries: entriesReducer,
     editor: editorReducer
 })
 
